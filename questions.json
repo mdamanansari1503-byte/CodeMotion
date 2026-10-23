@@ -667,6 +667,44 @@
           ]
         }
       ]
+      "findSmallest": {
+    "id": "findSmallest",
+    "title": "Find the Smallest Number",
+    "intro": "Learn how to find the minimum element in a list of integers using a standard loop instead of the built-in min() function.",
+    "problem": "Given a list of integers, find the smallest number. Do not use the built-in min() function.",
+    "input": "x = [12, 5, 23, 2, 18]",
+    "output": "2",
+    "code": [
+      "x = [12, 5, 23, 2, 18]",
+      "m = x[0]",
+      "for num in x:",
+      "    if num < m:",
+      "        m = num",
+      "print(m)"
+    ],
+    "steps": [
+      {
+        "heading": "Initialize Minimum",
+        "text": "We assume the first element of the list is the smallest and store it in variable 'm'.",
+        "visual": ["m = 12"]
+      },
+      {
+        "heading": "Iterate Through List",
+        "text": "We loop through each number in the list 'x' one by one.",
+        "visual": ["num = 5"]
+      },
+      {
+        "heading": "Compare and Update",
+        "text": "If the current number is smaller than 'm', we update 'm' with the new smaller value.",
+        "visual": ["5 < 12 -> m = 5"]
+      },
+      {
+        "heading": "Print Result",
+        "text": "After checking all elements, we print the final smallest number found.",
+        "visual": ["Output: 2"]
+      }
+    ]
+  }
     }
   }
 }
