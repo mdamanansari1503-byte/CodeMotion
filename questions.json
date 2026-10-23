@@ -19,8 +19,38 @@
             "countSigns",
             "reverseNumber",
             "factorial",
-            "prime"
-            "findSmallest"
+            "prime" ,
+            "findSmallest",
+            "countOdd",
+            "calculateAverage",
+            "checkNumber",
+            "printNumbers",
+            "printReverse",
+            "sumNumbers",
+            "printMultiples",
+            "countDigits",
+            "sumOfDigits",
+            "checkPalindromeNumber",
+            "countVowels",
+            "reverseString",
+            "countUpperLower",
+            "findStringLength",
+            "findLargestInList",
+            "rightAngledStarPattern",
+            "invertedStarPattern",
+            "findAllFactors",
+            "countOccurrence",
+            "checkLeapYear",
+            "findSecondLargest",
+            "removeDuplicateElements",
+            "findCommonElements",
+            "frequencyOfEachElement",
+            "findMissingNumber",
+            "separateEvenOdd",
+            "findFirstRepeatedElement",
+            "findSumEvenOdd",
+          "findNumberOfWords"
+
           ]
         },
         {
@@ -684,6 +714,1532 @@
         {
           "heading": "Print Result",
           "text": "After checking all elements, we print the final smallest number found.",
+          "visual": ["Output: 2"]
+        }
+      ]
+    },
+    "countOdd": {
+      "id": 12,
+      "title": "Count Odd Numbers",
+      "intro": "Learn how to count the number of odd integers in a given list using a loop and conditional statement.",
+      "problem": "Given a list of integers, count how many numbers are odd.",
+      "input": "[10, 7, 4, 9, 12, 5]",
+      "output": "3",
+      "code": [
+        "x = [10, 7, 4, 9, 12, 5]",
+        "odd = 0",
+        "for i in x:",
+        "    if i % 2 != 0:",
+        "        odd += 1",
+        "print(odd)"
+      ],
+      "steps": [
+        {
+          "heading": "Initialize List & Counter",
+          "text": "We define the list 'x' and initialize our odd counter to 0.",
+          "visual": ["x = [10, 7, 4, 9, 12, 5]", "odd = 0"]
+        },
+        {
+          "heading": "Iterate Through List",
+          "text": "The for loop picks each number one by one from the list 'x'[cite: 4].",
+          "visual": ["i = 10, 7, 4, 9, 12, 5"]
+        },
+        {
+          "heading": "Check Condition & Count",
+          "text": "We check if the number is odd (i % 2 != 0). If true, odd counter increases by 1[cite: 4].",
+          "visual": ["7, 9, 5 are odd -> odd = 3"]
+        },
+        {
+          "heading": "Print Result",
+          "text": "Finally, print(odd) displays the total count of odd numbers[cite: 4].",
+          "visual": ["Output: 3"]
+        }
+      ]
+    },
+    "calculateAverage": {
+      "id": 13,
+      "title": "Calculate the Average of Numbers",
+      "intro": "Learn how to calculate the average of a list of numbers by finding their sum and dividing by the total count.",
+      "problem": "Given a list of numbers, calculate and print their average. Do not use the built-in sum() function.",
+      "input": "[10, 20, 30, 40]",
+      "output": "25.0",
+      "code": [
+        "x = [10, 20, 30, 40]",
+        "num = 0",
+        "for i in x:",
+        "    num = num + i",
+        "b = len(x)",
+        "print(num/b)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define Karna",
+          "text": "Yahan input list 'x' define ki gayi hai jisme numbers diye gaye hain.",
+          "visual": ["x = [10, 20, 30, 40]"]
+        },
+        {
+          "heading": "Line 2: Sum Variable Initialize Karna",
+          "text": "Yahan 'num' variable ko 0 se set kiya gaya hai taaki numbers ka sum store ho sake.",
+          "visual": ["num = 0"]
+        },
+        {
+          "heading": "Line 3: For Loop Shuru Karna",
+          "text": "Yahan for loop lagaya gaya hai jo list 'x' ke har ek number 'i' par ek-ek karke jayega.",
+          "visual": ["i = 10, 20, 30, 40"]
+        },
+        {
+          "heading": "Line 4: Sum Me Number Add Karna",
+          "text": "Yahan current number 'i' ko 'num' me jod kar total sum ko update kiya jata hai.",
+          "visual": ["num = num + i"]
+        },
+        {
+          "heading": "Line 5: List Ki Length Nikalna",
+          "text": "Yahan len() function ka use karke list ke total elements ki sankhya 'b' me store ki jati hai.",
+          "visual": ["b = 4"]
+        },
+        {
+          "heading": "Line 6: Average Print Karna",
+          "text": "Yahan total sum ko length se divide karke final average print kiya jata hai.",
+          "visual": ["Output: 25.0"]
+        }
+      ]
+    },
+    "checkNumber": {
+      "id": 14,
+      "title": "Check Positive, Negative or Zero",
+      "intro": "Learn how to use if-elif-else conditional statements to determine the sign of an integer.",
+      "problem": "Given an integer, determine whether it is Positive, Negative, or Zero.",
+      "input": "-15",
+      "output": "Negative",
+      "code": [
+        "x = -15",
+        "if x > 0:",
+        "    print(\"Positive\")",
+        "elif x < 0:",
+        "    print(\"Negative\")",
+        "else:",
+        "    print(\"Zero\")"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Variable Define Karna",
+          "text": "Yahan input variable 'x' ko -15 value ke sath define kiya gaya hai.",
+          "visual": ["x = -15"]
+        },
+        {
+          "heading": "Line 2: Pehli Condition Check Karna (if)",
+          "text": "Yahan check kiya jata hai kya x ki value 0 se badi hai ya nahi.",
+          "visual": ["-15 > 0 (False)"]
+        },
+        {
+          "heading": "Line 3: Positive Print Karna",
+          "text": "Agar pehli condition true hoti toh yeh line 'Positive' print karti, par yahan false hai.",
+          "visual": ["Skipped"]
+        },
+        {
+          "heading": "Line 4: Doosri Condition Check Karna (elif)",
+          "text": "Yahan check kiya jata hai kya x ki value 0 se chhoti hai ya nahi.",
+          "visual": ["-15 < 0 (True)"]
+        },
+        {
+          "heading": "Line 5: Negative Print Karna",
+          "text": "Kyunki elif condition true ho gayi, isliye yeh line execute hoti hai aur 'Negative' print karti hai.",
+          "visual": ["Output: Negative"]
+        },
+        {
+          "heading": "Line 6: Else Block",
+          "text": "Agar upar ki koi condition match nahi karti toh else block par aate, par yahan zaroorat nahi padi.",
+          "visual": ["Skipped"]
+        },
+        {
+          "heading": "Line 7: Zero Print Karna",
+          "text": "Yeh line tabhi chalti jab number exactly 0 hota.",
+          "visual": ["Skipped"]
+        }
+      ]
+    },
+    "printNumbers": {
+      "id": 15,
+      "title": "Print Numbers from 1 to N",
+      "intro": "Learn how to use a for loop and range() to print numbers sequentially from 1 up to a given integer N.",
+      "problem": "Given an integer N, print all numbers from 1 to N.",
+      "input": "5",
+      "output": "1 2 3 4 5",
+      "code": [
+        "x = 3",
+        "a = 1",
+        "for i in range(1, 1 + x):",
+        "    print(a)",
+        "    a = a + 1"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Variable Define Karna",
+          "text": "Yahan input variable 'x' ko 3 (ya N ki value) ke sath define kiya gaya hai.",
+          "visual": ["x = 3"]
+        },
+        {
+          "heading": "Line 2: Counter Initialize Karna",
+          "text": "Yahan variable 'a' ko 1 se start karne ke liye set kiya gaya hai.",
+          "visual": ["a = 1"]
+        },
+        {
+          "heading": "Line 3: For Loop Shuru Karna",
+          "text": "Yahan range(1, 1 + x) ka use karke 1 se lekar x tak loop chalaya jata hai.",
+          "visual": ["i = 1, 2, 3"]
+        },
+        {
+          "heading": "Line 4: Current Number Print Karna",
+          "text": "Yahan variable 'a' ki current value ko screen par print kiya jata hai.",
+          "visual": ["Output: 1", "Output: 2", "Output: 3"]
+        },
+        {
+          "heading": "Line 5: Counter Value Badhana",
+          "text": "Yahan har baar print hone ke baad 'a' ki value me 1 ka izafa kiya jata hai.",
+          "visual": ["a = a + 1"]
+        }
+      ]
+    },
+    "printReverse": {
+      "id": 16,
+      "title": "Print Numbers in Reverse",
+      "intro": "Learn how to print numbers from N down to 1 using a loop and decrementing values.",
+      "problem": "Given an integer N, print numbers from N down to 1.",
+      "input": "5",
+      "output": "5 4 3 2 1",
+      "code": [
+        "x = 3",
+        "for i in range(0, x):",
+        "    print(x, \"\", end=\"\")",
+        "    x = x - 1"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Variable Define Karna",
+          "text": "Yahan input variable 'x' ko 3 (ya N ki value) ke sath define kiya gaya hai.",
+          "visual": ["x = 3"]
+        },
+        {
+          "heading": "Line 2: For Loop Shuru Karna",
+          "text": "Yahan range(0, x) ka use karke loop chalaya jata hai jo 'x' baar execute hota hai.",
+          "visual": ["i in range(0, 3)"]
+        },
+        {
+          "heading": "Line 3: Current Number Print Karna",
+          "text": "Yahan 'x' ki current value ko screen par print kiya jata hai bina naye line me gaye.",
+          "visual": ["Output: 3"]
+        },
+        {
+          "heading": "Line 4: Variable Ghatana",
+          "text": "Yahan har baar print hone ke baad 'x' ki value me se 1 kam kar diya jata hai.",
+          "visual": ["x = x - 1"]
+        }
+      ]
+    },
+    "sumNumbers": {
+      "id": 17,
+      "title": "Sum of Numbers from 1 to N",
+      "intro": "Learn how to calculate the cumulative sum of all integers from 1 up to N using a loop.",
+      "problem": "Given an integer N, calculate the sum of all numbers from 1 to N.",
+      "input": "5",
+      "output": "15",
+      "code": [
+        "x = 10",
+        "a = 1",
+        "b = 0",
+        "for i in range(1, 1 + x):",
+        "    b = b + a",
+        "    a = a + 1",
+        "print(b)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Variable Define Karna",
+          "text": "Yahan input variable 'x' ko define kiya gaya hai jo limit batata hai.",
+          "visual": ["x = 10"]
+        },
+        {
+          "heading": "Line 2: Counter Initialize Karna",
+          "text": "Yahan variable 'a' ko 1 se start karne ke liye set kiya gaya hai.",
+          "visual": ["a = 1"]
+        },
+        {
+          "heading": "Line 3: Sum Variable Initialize Karna",
+          "text": "Yahan variable 'b' ko 0 se set kiya gaya hai jo total sum store karega.",
+          "visual": ["b = 0"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru Karna",
+          "text": "Yahan 1 se lekar x tak numbers ke liye loop chalaya jata hai.",
+          "visual": ["i in range(1, 11)"]
+        },
+        {
+          "heading": "Line 5: Sum Me Value Jodna",
+          "text": "Yahan 'a' ki value ko 'b' me add karke running total update kiya jata hai.",
+          "visual": ["b = b + a"]
+        },
+        {
+          "heading": "Line 6: Counter Badhana",
+          "text": "Yahan 'a' ki value ko 1 se badha diya jata hai agle number ke liye.",
+          "visual": ["a = a + 1"]
+        },
+        {
+          "heading": "Line 7: Final Sum Print Karna",
+          "text": "Yahan loop khatam hone ke baad total sum 'b' ko print kiya jata hai.",
+          "visual": ["Output: 15"]
+        }
+      ]
+    },
+    "printMultiples": {
+      "id": 18,
+      "title": "Print All Multiples of a Number",
+      "intro": "Learn how to use a while loop to generate and print multiples of a number up to a given limit.",
+      "problem": "Given two integers N and limit, print all multiples of N from N up to limit.",
+      "input": "N = 5, Limit = 30",
+      "output": "5 10 15 20 25 30",
+      "code": [
+        "a = 3",
+        "b = 15",
+        "x = a",
+        "while(x <= b):",
+        "    print(x)",
+        "    x = x + a"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Multiplier Base Define Karna",
+          "text": "Yahan 'a' me wo number rakha gaya hai jiske multiples nikalne hain.",
+          "visual": ["a = 3"]
+        },
+        {
+          "heading": "Line 2: Limit Define Karna",
+          "text": "Yahan 'b' me maximum limit set ki gayi hai jahan tak multiples print honge.",
+          "visual": ["b = 15"]
+        },
+        {
+          "heading": "Line 3: Starting Value Assign Karna",
+          "text": "Yahan variable 'x' me pehla multiple ('a') daal kar shuruat ki jati hai.",
+          "visual": ["x = 3"]
+        },
+        {
+          "heading": "Line 4: While Loop Condition",
+          "text": "Yahan check hota hai ki jab tak x ki value limit 'b' se choti ya barabar hai, loop chalega.",
+          "visual": ["3 <= 15 (True)"]
+        },
+        {
+          "heading": "Line 5: Multiple Print Karna",
+          "text": "Yahan current multiple 'x' ko screen par print kiya jata hai.",
+          "visual": ["Output: 3"]
+        },
+        {
+          "heading": "Line 6: Next Multiple Par Jana",
+          "text": "Yahan 'x' me 'a' jod kar agla multiple banaya jata hai.",
+          "visual": ["x = 3 + 3 = 6"]
+        }
+      ]
+    },
+    "countDigits": {
+      "id": 19,
+      "title": "Count Digits in a Number",
+      "intro": "Learn how to count the number of digits in an integer using a while loop.",
+      "problem": "Given an integer, count how many digits it contains. Do not convert the number into a string.",
+      "input": "12345",
+      "output": "5",
+      "code": [
+        "x = 789",
+        "a = 0",
+        "while (x > 0):",
+        "    x = x // 10",
+        "    a += 1",
+        "print(a)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Variable Define Karna",
+          "text": "Yahan input integer 'x' ko define kiya gaya hai.",
+          "visual": ["x = 789"]
+        },
+        {
+          "heading": "Line 2: Counter Initialize Karna",
+          "text": "Yahan 'a' variable ko 0 se set kiya gaya hai digits count karne ke liye.",
+          "visual": ["a = 0"]
+        },
+        {
+          "heading": "Line 3: While Loop Condition",
+          "text": "Yahan check hota hai ki jab tak x ki value 0 se badi hai, loop chalega.",
+          "visual": ["789 > 0 (True)"]
+        },
+        {
+          "heading": "Line 4: Last Digit Hatana",
+          "text": "Yahan floor division (// 10) ka use karke aakhri digit ko hata diya jata hai.",
+          "visual": ["x = 78"]
+        },
+        {
+          "heading": "Line 5: Counter Badhana",
+          "text": "Yahan digit count 'a' ko 1 se badha diya jata hai.",
+          "visual": ["a = 1"]
+        },
+        {
+          "heading": "Line 6: Final Count Print Karna",
+          "text": "Yahan loop complete hone ke baad total digits 'a' ko print kiya jata hai.",
+          "visual": ["Output: 3"]
+        }
+      ]
+    },
+    "sumOfDigits": {
+      "id": 20,
+      "title": "Sum of Digits",
+      "intro": "Learn how to extract and calculate the sum of all digits in an integer using a while loop.",
+      "problem": "Given an integer, calculate the sum of all its digits.",
+      "input": "12345",
+      "output": "15",
+      "code": [
+        "x = 246",
+        "s = 0",
+        "while x > 0:",
+        "    rem = x % 10",
+        "    s = s + rem",
+        "    x = x // 10",
+        "print(s)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Variable Define Karna",
+          "text": "Yahan input integer 'x' ko define kiya gaya hai.",
+          "visual": ["x = 246"]
+        },
+        {
+          "heading": "Line 2: Sum Variable Initialize",
+          "text": "Yahan 's' variable ko 0 se set kiya gaya hai digits ka sum store karne ke liye.",
+          "visual": ["s = 0"]
+        },
+        {
+          "heading": "Line 3: While Loop Condition",
+          "text": "Yahan check hota hai ki jab tak x ki value 0 se badi hai, loop chalega.",
+          "visual": ["246 > 0 (True)"]
+        },
+        {
+          "heading": "Line 4: Last Digit Nikalna",
+          "text": "Yahan modulo operator (% 10) ka use karke aakhri digit ('rem') nikali jati hai.",
+          "visual": ["rem = 6"]
+        },
+        {
+          "heading": "Line 5: Sum Me Digit Jodna",
+          "text": "Yahan nikali gayi digit ko 's' me add kiya jata hai.",
+          "visual": ["s = 0 + 6 = 6"]
+        },
+        {
+          "heading": "Line 6: Last Digit Hatana",
+          "text": "Yahan floor division (// 10) se aakhri digit ko x se hata diya jata hai.",
+          "visual": ["x = 24"]
+        },
+        {
+          "heading": "Line 7: Final Sum Print Karna",
+          "text": "Yahan loop khatam hone ke baad total sum 's' ko print kiya jata hai.",
+          "visual": ["Output: 12"]
+        }
+      ]
+    },
+    "checkPalindromeNumber": {
+      "id": 21,
+      "title": "Check Whether a Number is a Palindrome",
+      "intro": "Learn how to check if a number reads the same forward and backward by storing digits in a list.",
+      "problem": "Given an integer, determine whether it reads the same forward and backward. Print Palindrome if true; otherwise print Not Palindrome.",
+      "input": "121",
+      "output": "Palindrome",
+      "code": [
+        "x = 12321",
+        "a = []",
+        "while x > 0:",
+        "    rem = x % 10",
+        "    a.append(rem)",
+        "    x = x // 10",
+        "if a == a[::-1]:",
+        "    print(\"Palindrome\")",
+        "else:",
+        "    print(\"Not Palindrome\")"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Variable Define",
+          "text": "Yahan input integer 'x' ko define kiya gaya hai.",
+          "visual": ["x = 12321"]
+        },
+        {
+          "heading": "Line 2: Empty List Define",
+          "text": "Yahan digits store karne ke liye ek khali list 'a' banayi gayi hai.",
+          "visual": ["a = []"]
+        },
+        {
+          "heading": "Line 3: While Loop Condition",
+          "text": "Yahan check hota hai ki jab tak x ki value 0 se badi hai, loop chalega.",
+          "visual": ["12321 > 0 (True)"]
+        },
+        {
+          "heading": "Line 4: Digit Extract Karna",
+          "text": "Yahan % 10 se aakhri digit 'rem' nikali jati hai.",
+          "visual": ["rem = 1"]
+        },
+        {
+          "heading": "Line 5: List Me Append Karna",
+          "text": "Yahan nikali gayi digit ko list 'a' me joda jata hai.",
+          "visual": ["a = [1]"]
+        },
+        {
+          "heading": "Line 6: Number Update Karna",
+          "text": "Yahan // 10 se aakhri digit hata di jati hai.",
+          "visual": ["x = 1232"]
+        },
+        {
+          "heading": "Line 7: Palindrome Check Karna",
+          "text": "Yahan check kiya jata hai ki original list aur reverse list (`a[::-1]`) barabar hain ya nahi.",
+          "visual": ["[1, 2, 3, 2, 1] == [1, 2, 3, 2, 1]"]
+        },
+        {
+          "heading": "Line 8: Palindrome Print",
+          "text": "Agar condition match ho jaye toh 'Palindrome' print hota hai.",
+          "visual": ["Output: Palindrome"]
+        },
+        {
+          "heading": "Line 9: Else Block",
+          "text": "Agar match na ho toh else part execute hota hai.",
+          "visual": ["Skipped"]
+        },
+        {
+          "heading": "Line 10: Not Palindrome Print",
+          "text": "Agar number palindrome nahi hai toh yeh line 'Not Palindrome' print karti hai.",
+          "visual": ["Skipped"]
+        }
+      ]
+    },
+    "countVowels": {
+      "id": 22,
+      "title": "Count Vowels in a String",
+      "intro": "Learn how to count vowels in a string using loops and membership checks.",
+      "problem": "Given a string, count the number of vowels (a, e, i, o, u) in it. The check should be case-insensitive.",
+      "input": "Hello World",
+      "output": "3",
+      "code": [
+        "x = 'Python Programming'",
+        "v = [\"a\", \"e\", \"i\", \"o\", \"u\", \"A\", \"E\", \"I\", \"O\", \"U\"]",
+        "a = 0",
+        "for i in x:",
+        "    if i in v:",
+        "        a += 1",
+        "print(a)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input String Define",
+          "text": "Yahan input string 'x' ko define kiya gaya hai.",
+          "visual": ["x = 'Python Programming'"]
+        },
+        {
+          "heading": "Line 2: Vowels List Define",
+          "text": "Yahan sabhi uppercase aur lowercase vowels ki ek list 'v' banayi gayi hai.",
+          "visual": ["v = [a, e, i, o, u, ...]"]
+        },
+        {
+          "heading": "Line 3: Counter Initialize",
+          "text": "Yahan 'a' variable ko 0 se set kiya gaya hai vowels count karne ke liye.",
+          "visual": ["a = 0"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru",
+          "text": "Yahan string 'x' ke har ek character 'i' par loop chalaya jata hai.",
+          "visual": ["i = P, y, t, h, o, n..."]
+        },
+        {
+          "heading": "Line 5: Vowel Check Karna",
+          "text": "Yahan check hota hai kya character 'i' vowels list 'v' ke andar maujood hai.",
+          "visual": ["'o' in v (True)"]
+        },
+        {
+          "heading": "Line 6: Counter Increment",
+          "text": "Agar character vowel hai, toh counter 'a' ko 1 se badha diya jata hai.",
+          "visual": ["a += 1"]
+        },
+        {
+          "heading": "Line 7: Final Count Print",
+          "text": "Yahan loop complete hone ke baad total vowels count print kiya jata hai.",
+          "visual": ["Output: 3"]
+        }
+      ]
+    },
+    "reverseString": {
+      "id": 23,
+      "title": "Reverse a String",
+      "intro": "Learn how to reverse a string easily using Python's slicing feature.",
+      "problem": "Given a string, print the string in reverse order.",
+      "input": "Python",
+      "output": "nohtyP",
+      "code": [
+        "x = 'Hello'",
+        "print(x[:: -1])"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input String Define",
+          "text": "Yahan input string 'x' ko define kiya gaya hai.",
+          "visual": ["x = 'Hello'"]
+        },
+        {
+          "heading": "Line 2: Reverse Print Using Slicing",
+          "text": "Yahan slicing syntax `x[::-1]` ka use karke string ko ulta karke print kiya jata hai.",
+          "visual": ["Output: olleH"]
+        }
+      ]
+    },
+    "countUpperLower": {
+      "id": 24,
+      "title": "Count Uppercase and Lowercase Letters",
+      "intro": "Learn how to count uppercase and lowercase letters in a string using string methods.",
+      "problem": "Given a string, count how many uppercase and lowercase letters it contains. Ignore numbers, spaces, and special characters.",
+      "input": "Hello Python!",
+      "output": "Uppercase: 2 Lowercase: 9",
+      "code": [
+        "x = 'Hello WORLD'",
+        "u = 0",
+        "l = 0",
+        "for i in x:",
+        "    if i.isalpha():",
+        "        if i.isupper():",
+        "            u += 1",
+        "        elif i.islower():",
+        "            l += 1",
+        "print(\"uppercase :\", u)",
+        "print(\"lowercase :\", l)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input String Define",
+          "text": "Yahan input string 'x' ko define kiya gaya hai.",
+          "visual": ["x = 'Hello WORLD'"]
+        },
+        {
+          "heading": "Line 2: Uppercase Counter",
+          "text": "Yahan uppercase letters gine ke liye 'u' ko 0 se initialize kiya gaya hai.",
+          "visual": ["u = 0"]
+        },
+        {
+          "heading": "Line 3: Lowercase Counter",
+          "text": "Yahan lowercase letters gine ke liye 'l' ko 0 se initialize kiya gaya hai.",
+          "visual": ["l = 0"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru",
+          "text": "Yahan string 'x' ke har character 'i' par loop chalaya jata hai.",
+          "visual": ["i = H, e, l, l, o..."]
+        },
+        {
+          "heading": "Line 5: Alphabet Check",
+          "text": "Yahan `isalpha()` se check hota hai ki character ek alphabet hai ya nahi.",
+          "visual": ["'H'.isalpha() (True)"]
+        },
+        {
+          "heading": "Line 6: Is Upper Check",
+          "text": "Yahan check hota hai kya character uppercase hai.",
+          "visual": ["'H'.isupper() (True)"]
+        },
+        {
+          "heading": "Line 7: Uppercase Increment",
+          "text": "Agar uppercase hai, toh 'u' ki value 1 se badh jati hai.",
+          "visual": ["u += 1"]
+        },
+        {
+          "heading": "Line 8: Is Lower Check",
+          "text": "Yahan check hota hai kya character lowercase hai.",
+          "visual": ["'e'.islower() (True)"]
+        },
+        {
+          "heading": "Line 9: Lowercase Increment",
+          "text": "Agar lowercase hai, toh 'l' ki value 1 se badh jati hai.",
+          "visual": ["l += 1"]
+        },
+        {
+          "heading": "Line 10: Print Uppercase",
+          "text": "Yahan total uppercase count print kiya jata hai.",
+          "visual": ["uppercase: 2"]
+        },
+        {
+          "heading": "Line 11: Print Lowercase",
+          "text": "Yahan total lowercase count print kiya jata hai.",
+          "visual": ["lowercase: 9"]
+        }
+      ]
+    },
+    "findStringLength": {
+      "id": 25,
+      "title": "Find the Length of a String",
+      "intro": "Learn how to find the length of a string using a loop instead of the built-in len() function.",
+      "problem": "Find the length of a string without using Python's built-in len() function.",
+      "input": "Python",
+      "output": "6",
+      "code": [
+        "x = 'Hello'",
+        "l = 0",
+        "for i in x:",
+        "    l += 1",
+        "print(l)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input String Define",
+          "text": "Yahan input string 'x' ko define kiya gaya hai.",
+          "visual": ["x = 'Hello'"]
+        },
+        {
+          "heading": "Line 2: Length Counter Initialize",
+          "text": "Yahan 'l' variable ko 0 se set kiya gaya hai length count karne ke liye.",
+          "visual": ["l = 0"]
+        },
+        {
+          "heading": "Line 3: For Loop Shuru",
+          "text": "Yahan string ke har character par loop chalaya jata hai.",
+          "visual": ["i = H, e, l, l, o"]
+        },
+        {
+          "heading": "Line 4: Counter Increment",
+          "text": "Har ek character ke liye length counter 'l' me 1 joda jata hai.",
+          "visual": ["l += 1"]
+        },
+        {
+          "heading": "Line 5: Print Length",
+          "text": "Yahan total calculated length print ki jati hai.",
+          "visual": ["Output: 5"]
+        }
+      ]
+    },
+    "findLargestInList": {
+      "id": 26,
+      "title": "Find the Largest Number in a List",
+      "intro": "Learn how to find the maximum element in a list of integers using a standard loop.",
+      "problem": "Given a list of integers, return the largest number.",
+      "input": "[1, 5, 2, 8]",
+      "output": "8",
+      "code": [
+        "x = [1, 5, 2, 8]",
+        "l = x[0]",
+        "for n in x:",
+        "    if n > l:",
+        "        l = n",
+        "print(l)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan input list 'x' ko define kiya gaya hai.",
+          "visual": ["x = [1, 5, 2, 8]"]
+        },
+        {
+          "heading": "Line 2: Assume Largest Element",
+          "text": "Yahan list ke pehle element ko temporary largest maan kar 'l' me store kiya jata hai.",
+          "visual": ["l = 1"]
+        },
+        {
+          "heading": "Line 3: For Loop Shuru",
+          "text": "Yahan list ke har number 'n' par loop chalaya jata hai.",
+          "visual": ["n = 1, 5, 2, 8"]
+        },
+        {
+          "heading": "Line 4: Compare Condition",
+          "text": "Yahan check hota hai kya current number 'l' se bada hai.",
+          "visual": ["5 > 1 (True)"]
+        },
+        {
+          "heading": "Line 5: Update Largest",
+          "text": "Agar current number bada hai, toh 'l' ko us naye number se update kar diya jata hai.",
+          "visual": ["l = 5"]
+        },
+        {
+          "heading": "Line 6: Print Largest",
+          "text": "Yahan loop ke baad sabse bada number print kiya jata hai.",
+          "visual": ["Output: 8"]
+        }
+      ]
+    },
+    "rightAngledStarPattern": {
+      "id": 27,
+      "title": "Print a Right-Angled Star Pattern",
+      "intro": "Learn how to print a right-angled triangle pattern using stars and loops.",
+      "problem": "Given N, print a right-angled triangle using *.",
+      "input": "3",
+      "output": "*\n**\n***",
+      "code": [
+        "x = 3",
+        "a = \"*\"",
+        "b = 1",
+        "for i in range(1, 1 + x):",
+        "    print(a)",
+        "    b += 1",
+        "    a = \"*\" * b"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Limit Define",
+          "text": "Yahan input integer 'x' ko define kiya gaya hai jo rows ki sankhya batata hai.",
+          "visual": ["x = 3"]
+        },
+        {
+          "heading": "Line 2: Initial Star Define",
+          "text": "Yahan pehli row ke liye ek star string 'a' banayi gayi hai.",
+          "visual": ["a = '*'"]
+        },
+        {
+          "heading": "Line 3: Counter Initialize",
+          "text": "Yahan 'b' variable ko 1 se initialize kiya gaya hai star count ke liye.",
+          "visual": ["b = 1"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru",
+          "text": "Yahan 1 se lekar x tak rows ke liye loop chalaya jata hai.",
+          "visual": ["i in range(1, 4)"]
+        },
+        {
+          "heading": "Line 5: Current Row Print",
+          "text": "Yahan current row me stars ki string 'a' ko print kiya jata hai.",
+          "visual": ["Output: *"]
+        },
+        {
+          "heading": "Line 6: Counter Increment",
+          "text": "Yahan agli row ke liye star count 'b' ko 1 se badhaya jata hai.",
+          "visual": ["b = 2"]
+        },
+        {
+          "heading": "Line 7: Star String Update",
+          "text": "Yahan naye count ke hisab se stars ki string ko update kiya jata hai.",
+          "visual": ["a = '**'"]
+        }
+      ]
+    },
+    "invertedStarPattern": {
+      "id": 28,
+      "title": "Print an Inverted Star Pattern",
+      "intro": "Learn how to print an inverted right-angled triangle pattern using stars.",
+      "problem": "Given N, print an inverted right-angled triangle using *.",
+      "input": "3",
+      "output": "***\n**\n*",
+      "code": [
+        "x = 3",
+        "for i in range(1, 1 + x):",
+        "    print(\"*\" * x)",
+        "    x -= 1"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Limit Define",
+          "text": "Yahan input integer 'x' ko define kiya gaya hai.",
+          "visual": ["x = 3"]
+        },
+        {
+          "heading": "Line 2: For Loop Shuru",
+          "text": "Yahan rows ke liye loop chalaya jata hai.",
+          "visual": ["i in range(1, 4)"]
+        },
+        {
+          "heading": "Line 3: Stars Print Karna",
+          "text": "Yahan 'x' ki current value ke barabar stars print kiye jate hain.",
+          "visual": ["Output: '***'"]
+        },
+        {
+          "heading": "Line 4: Limit Decrement",
+          "text": "Yahan agli row ke liye 'x' ki value ko 1 se kam kiya jata hai.",
+          "visual": ["x = 2"]
+        }
+      ]
+    },
+    "findAllFactors": {
+      "id": 29,
+      "title": "Find All Factors of a Number",
+      "intro": "Learn how to find all factors of a number in ascending order using a while loop.",
+      "problem": "Given an integer N, print all of its factors in ascending order. A factor is a number that divides N exactly.",
+      "input": "12",
+      "output": "1 2 3 4 6 12",
+      "code": [
+        "x = 10",
+        "a = 1",
+        "while a <= x:",
+        "    if x % a == 0:",
+        "        print(a, \"\", end=\"\")",
+        "    a += 1"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Number Define",
+          "text": "Yahan input number 'x' ko define kiya gaya hai.",
+          "visual": ["x = 10"]
+        },
+        {
+          "heading": "Line 2: Divisor Initialize",
+          "text": "Yahan check karne ke liye 'a' ko 1 se shuru kiya gaya hai.",
+          "visual": ["a = 1"]
+        },
+        {
+          "heading": "Line 3: While Loop Condition",
+          "text": "Yahan check hota hai jab tak a ki value x ke barabar ya choti hai, loop chalega.",
+          "visual": ["1 <= 10 (True)"]
+        },
+        {
+          "heading": "Line 4: Factor Check",
+          "text": "Yahan check hota hai kya 'a' se 'x' poora divide hota hai (remainder 0).",
+          "visual": ["10 % 1 == 0 (True)"]
+        },
+        {
+          "heading": "Line 5: Factor Print",
+          "text": "Agar factor hai, toh use print kiya jata hai.",
+          "visual": ["Output: 1"]
+        },
+        {
+          "heading": "Line 6: Divisor Increment",
+          "text": "Yahan 'a' ki value ko 1 se badhaya jata hai agle number ke liye.",
+          "visual": ["a = 2"]
+        }
+      ]
+    },
+    "countOccurrence": {
+      "id": 30,
+      "title": "Count the Occurrence of a Number",
+      "intro": "Learn how to count how many times a target number appears in a list without using count().",
+      "problem": "Given a list of integers and a target number, count how many times the target appears in the list. Do not use the built-in count() function.",
+      "input": "Numbers = [2, 5, 2, 8, 2, 9], Target = 2",
+      "output": "3",
+      "code": [
+        "a = [1, 2, 3, 2, 4, 2]",
+        "b = 2",
+        "c = 0",
+        "for i in a:",
+        "    if i == b:",
+        "        c += 1",
+        "print(c)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan numbers ki list 'a' define ki gayi hai.",
+          "visual": ["a = [1, 2, 3, 2, 4, 2]"]
+        },
+        {
+          "heading": "Line 2: Target Define",
+          "text": "Yahan target number 'b' define kiya gaya hai jisko count karna hai.",
+          "visual": ["b = 2"]
+        },
+        {
+          "heading": "Line 3: Counter Initialize",
+          "text": "Yahan occurrence count karne ke liye 'c' ko 0 se set kiya gaya hai.",
+          "visual": ["c = 0"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru",
+          "text": "Yahan list 'a' ke har element 'i' par loop chalaya jata hai.",
+          "visual": ["i = 1, 2, 3, 2..."]
+        },
+        {
+          "heading": "Line 5: Target Match Check",
+          "text": "Yahan check hota hai kya current element target 'b' ke barabar hai.",
+          "visual": ["2 == 2 (True)"]
+        },
+        {
+          "heading": "Line 6: Counter Increment",
+          "text": "Agar match milta hai, toh counter 'c' ko 1 se badhaya jata hai.",
+          "visual": ["c += 1"]
+        },
+        {
+          "heading": "Line 7: Final Count Print",
+          "text": "Yahan loop ke baad total occurrence count print kiya jata hai.",
+          "visual": ["Output: 3"]
+        }
+      ]
+    },
+    "checkLeapYear": {
+      "id": 31,
+      "title": "Check Leap Year",
+      "intro": "Learn how to determine if a given year is a leap year using logical conditions.",
+      "problem": "Given a year, determine whether it is a leap year. Divisible by 400, or divisible by 4 but not by 100.",
+      "input": "2024",
+      "output": "Leap Year",
+      "code": [
+        "x = 2023",
+        "if (x % 400 == 0) or x % 4 == 0 and x % 100 != 0:",
+        "    print(\"Leap Year\")",
+        "else:",
+        "    print(\"not a leap year\")"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Year Define",
+          "text": "Yahan input year 'x' ko define kiya gaya hai.",
+          "visual": ["x = 2023"]
+        },
+        {
+          "heading": "Line 2: Leap Year Condition Check",
+          "text": "Yahan check hota hai kya year 400 se divisible hai ya (4 se divisible aur 100 se nahi).",
+          "visual": ["2023 % 4 == 0 (False)"]
+        },
+        {
+          "heading": "Line 3: Leap Year Print",
+          "text": "Agar condition true ho toh 'Leap Year' print hota hai.",
+          "visual": ["Skipped"]
+        },
+        {
+          "heading": "Line 4: Else Block",
+          "text": "Agar condition false ho toh else block execute hota hai.",
+          "visual": ["Executed"]
+        },
+        {
+          "heading": "Line 5: Not Leap Year Print",
+          "text": "Yahan 'not a leap year' print kiya jata hai.",
+          "visual": ["Output: not a leap year"]
+        }
+      ]
+    },
+    "findSecondLargest": {
+      "id": 32,
+      "title": "Find the Second Largest Number",
+      "intro": "Learn how to find the second largest distinct number in a list without using sort().",
+      "problem": "Given a list of integers, find the second-largest distinct number. Do not use sort().",
+      "input": "[10, 25, 7, 18, 25, 12]",
+      "output": "18",
+      "code": [
+        "x = [5, 9, 2, 7]",
+        "lag = x[0]",
+        "for i in x:",
+        "    if i > lag:",
+        "        lag = i",
+        "sec = x[0]",
+        "for i in x:",
+        "    if i != lag:",
+        "        sec = i",
+        "        break",
+        "for i in x:",
+        "    if i > sec and i < lag:",
+        "        sec = i",
+        "print(sec)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan input list 'x' define ki gayi hai.",
+          "visual": ["x = [5, 9, 2, 7]"]
+        },
+        {
+          "heading": "Line 2: Largest Initialize",
+          "text": "Pehle element ko sabse bada maan kar 'lag' me rakha jata hai.",
+          "visual": ["lag = 5"]
+        },
+        {
+          "heading": "Line 3: Loop for Largest",
+          "text": "List ke sabhi elements par loop chalta hai.",
+          "visual": ["i = 5, 9, 2, 7"]
+        },
+        {
+          "heading": "Line 4: Check Larger",
+          "text": "Check hota hai kya current element 'lag' se bada hai.",
+          "visual": ["9 > 5 (True)"]
+        },
+        {
+          "heading": "Line 5: Update Largest",
+          "text": "Largest variable ko update kiya jata hai.",
+          "visual": ["lag = 9"]
+        },
+        {
+          "heading": "Line 6: Initial Second Largest",
+          "text": "Second largest ke liye temporary value set ki jati hai.",
+          "visual": ["sec = 5"]
+        },
+        {
+          "heading": "Line 7: Loop for Second",
+          "text": "Aise element ki talash ke liye loop jo largest ke barabar na ho.",
+          "visual": ["i in x"]
+        },
+        {
+          "heading": "Line 8: Not Equal Check",
+          "text": "Check hota hai kya element largest nahi hai.",
+          "visual": ["5 != 9 (True)"]
+        },
+        {
+          "heading": "Line 9: Set Initial Second",
+          "text": "Initial second value set hoti hai.",
+          "visual": ["sec = 5"]
+        },
+        {
+          "heading": "Line 10: Break Loop",
+          "text": "Pehla valid element milne par loop tod diya jata hai.",
+          "visual": ["break"]
+        },
+        {
+          "heading": "Line 11: Final Search Loop",
+          "text": "Sahi second largest nikalne ke liye dobara loop chalta hai.",
+          "visual": ["i in x"]
+        },
+        {
+          "heading": "Line 12: Second Condition",
+          "text": "Check hota hai kya element 'sec' se bada aur 'lag' se chota hai.",
+          "visual": ["7 > 5 and 7 < 9 (True)"]
+        },
+        {
+          "heading": "Line 13: Update Second",
+          "text": "Second largest value update hoti hai.",
+          "visual": ["sec = 7"]
+        },
+        {
+          "heading": "Line 14: Print Second Largest",
+          "text": "Final second largest number print kiya jata hai.",
+          "visual": ["Output: 7"]
+        }
+      ]
+    },
+    "removeDuplicateElements": {
+      "id": 33,
+      "title": "Remove Duplicate Elements",
+      "intro": "Learn how to remove duplicate elements from a list while maintaining order without using set().",
+      "problem": "Given a list of integers, create a new list containing each number only once. Maintain the order in which numbers first appear. Do not use set().",
+      "input": "[1, 2, 2, 3, 1, 4, 3]",
+      "output": "[1, 2, 3, 4]",
+      "code": [
+        "x = [5, 5, 5, 2, 2, 1]",
+        "a = []",
+        "for i in x:",
+        "    if i not in a:",
+        "        a.append(i)",
+        "print(a)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan input list 'x' define ki gayi hai jisme duplicates hain.",
+          "visual": ["x = [5, 5, 5, 2, 2, 1]"]
+        },
+        {
+          "heading": "Line 2: Empty Result List",
+          "text": "Unique elements store karne ke liye ek khali list 'a' banayi gayi hai.",
+          "visual": ["a = []"]
+        },
+        {
+          "heading": "Line 3: For Loop Shuru",
+          "text": "List 'x' ke har element 'i' par loop chalaya jata hai.",
+          "visual": ["i = 5, 5, 5, 2..."]
+        },
+        {
+          "heading": "Line 4: Membership Check",
+          "text": "Check kiya jata hai kya element 'i' pehle se list 'a' me maujood nahi hai.",
+          "visual": ["5 not in a (True)"]
+        },
+        {
+          "heading": "Line 5: Append Unique",
+          "text": "Agar element nahi hai, toh use list 'a' me joda jata hai.",
+          "visual": ["a = [5]"]
+        },
+        {
+          "heading": "Line 6: Print Unique List",
+          "text": "Loop complete hone ke baad unique elements wali list print ki jati hai.",
+          "visual": ["Output: [5, 2, 1]"]
+        }
+      ]
+    },
+    "findCommonElements": {
+      "id": 34,
+      "title": "Find Common Elements",
+      "intro": "Learn how to find common elements between two lists without duplicates.",
+      "problem": "Given two lists, find the elements that appear in both lists. Each common element should appear only once in the result.",
+      "input": "A = [1, 2, 3, 4] B = [3, 4, 5, 6]",
+      "output": "[3, 4]",
+      "code": [
+        "a = [1, 2, 3]",
+        "b = [5, 7, 9]",
+        "x = []",
+        "for i in a:",
+        "    if i in b:",
+        "        if i not in x:",
+        "            x.append(i)",
+        "print(x)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: First List Define",
+          "text": "Pehli list 'a' define ki gayi hai.",
+          "visual": ["a = [1, 2, 3]"]
+        },
+        {
+          "heading": "Line 2: Second List Define",
+          "text": "Doosri list 'b' define ki gayi hai.",
+          "visual": ["b = [5, 7, 9]"]
+        },
+        {
+          "heading": "Line 3: Result List",
+          "text": "Common elements store karne ke liye khali list 'x' banayi gayi hai.",
+          "visual": ["x = []"]
+        },
+        {
+          "heading": "Line 4: Loop First List",
+          "text": "Pehli list ke har element 'i' par loop chalta hai.",
+          "visual": ["i = 1, 2, 3"]
+        },
+        {
+          "heading": "Line 5: Check in Second List",
+          "text": "Check hota hai kya element 'b' list me bhi hai.",
+          "visual": ["1 in b (False)"]
+        },
+        {
+          "heading": "Line 6: Check Duplicate in Result",
+          "text": "Check hota hai kya element pehle se result list me nahi hai.",
+          "visual": ["Skipped"]
+        },
+        {
+          "heading": "Line 7: Append Common",
+          "text": "Common element ko result list me joda jata hai.",
+          "visual": ["Skipped"]
+        },
+        {
+          "heading": "Line 8: Print Common List",
+          "text": "Final common elements ki list print ki jati hai.",
+          "visual": ["Output: []"]
+        }
+      ]
+    },
+    "frequencyOfEachElement": {
+      "id": 35,
+      "title": "Find the Frequency of Each Element",
+      "intro": "Learn how to find the frequency of each element in a list using dictionaries.",
+      "problem": "Given a list of integers, count how many times each number occurs.",
+      "input": "[1, 2, 2, 3, 1, 2]",
+      "output": "{1: 2, 2: 3, 3: 1}",
+      "code": [
+        "x = [5, 5, 2, 5, 2]",
+        "a = {}",
+        "for i in x:",
+        "    a[i] = x.count(i)",
+        "print(a)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan input list 'x' define ki gayi hai.",
+          "visual": ["x = [5, 5, 2, 5, 2]"]
+        },
+        {
+          "heading": "Line 2: Empty Dictionary",
+          "text": "Frequencies store karne ke liye ek khali dictionary 'a' banayi gayi hai.",
+          "visual": ["a = {}"]
+        },
+        {
+          "heading": "Line 3: For Loop Shuru",
+          "text": "List ke har element 'i' par loop chalaya jata hai.",
+          "visual": ["i = 5, 5, 2, 5, 2"]
+        },
+        {
+          "heading": "Line 4: Count and Store",
+          "text": "Element ki frequency `x.count(i)` se nikal kar dictionary me assign ki jati hai.",
+          "visual": ["a[5] = 3"]
+        },
+        {
+          "heading": "Line 5: Print Dictionary",
+          "text": "Final frequency dictionary print ki jati hai.",
+          "visual": ["Output: {5: 3, 2: 2}"]
+        }
+      ]
+    },
+    "findMissingNumber": {
+      "id": 36,
+      "title": "Find the Missing Number",
+      "intro": "Learn how to find the missing number from 1 to N using list comparison.",
+      "problem": "You are given a list containing numbers from 1 to N, but exactly one number is missing. Find the missing number.",
+      "input": "N = 5 Numbers = [1, 2, 3, 5]",
+      "output": "4",
+      "code": [
+        "a = 6",
+        "b = [1, 2, 4, 5, 6]",
+        "l = []",
+        "for i in range(1, 1 + a):",
+        "    l.append(i)",
+        "for i in l:",
+        "    if i not in b:",
+        "        print(i)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Limit Define",
+          "text": "Yahan 'a' me N ki value define ki gayi hai.",
+          "visual": ["a = 6"]
+        },
+        {
+          "heading": "Line 2: Given List Define",
+          "text": "Yahan missing number wali input list 'b' di gayi hai.",
+          "visual": ["b = [1, 2, 4, 5, 6]"]
+        },
+        {
+          "heading": "Line 3: Empty Complete List",
+          "text": "1 se N tak ki poori list rakhne ke liye khali list 'l' banayi gayi hai.",
+          "visual": ["l = []"]
+        },
+        {
+          "heading": "Line 4: Range Loop",
+          "text": "1 se N tak numbers generate karne ke liye loop chalta hai.",
+          "visual": ["i in range(1, 7)"]
+        },
+        {
+          "heading": "Line 5: Append to Complete List",
+          "text": "Numbers ko list 'l' me joda jata hai.",
+          "visual": ["l = [1, 2, 3, 4, 5, 6]"]
+        },
+        {
+          "heading": "Line 6: Check Missing Loop",
+          "text": "Complete list 'l' ke har element ke liye check hota hai.",
+          "visual": ["i in l"]
+        },
+        {
+          "heading": "Line 7: Check Not in Given List",
+          "text": "Check hota hai kya element given list 'b' me maujood nahi hai.",
+          "visual": ["3 not in b (False)"]
+        },
+        {
+          "heading": "Line 8: Print Missing Number",
+          "text": "Jo element nahi milta, use missing number ke roop me print kiya jata hai.",
+          "visual": ["Output: 3"]
+        }
+      ]
+    },
+    "separateEvenOdd": {
+      "id": 37,
+      "title": "Separate Even and Odd Numbers",
+      "intro": "Learn how to separate even and odd numbers from a list into two distinct lists maintaining order.",
+      "problem": "Given a list of integers, create two lists: One containing even numbers, One containing odd numbers. Maintain their original order.",
+      "input": "[10, 7, 8, 3, 2]",
+      "output": "Even: [10, 8, 2] Odd: [7, 3]",
+      "code": [
+        "x = [10, 7, 8, 3, 2]",
+        "e = []",
+        "o = []",
+        "for i in x:",
+        "    if i % 2 == 0:",
+        "        e.append(i)",
+        "    else:",
+        "        o.append(i)",
+        "print(F\"Even : {e} Odd : {o}\")"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan input list 'x' define ki gayi hai.",
+          "visual": ["x = [10, 7, 8, 3, 2]"]
+        },
+        {
+          "heading": "Line 2: Even List",
+          "text": "Even numbers store karne ke liye khali list 'e' banayi gayi hai.",
+          "visual": ["e = []"]
+        },
+        {
+          "heading": "Line 3: Odd List",
+          "text": "Odd numbers store karne ke liye khali list 'o' banayi gayi hai.",
+          "visual": ["o = []"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru",
+          "text": "List 'x' ke har element 'i' par loop chalta hai.",
+          "visual": ["i = 10, 7, 8, 3, 2"]
+        },
+        {
+          "heading": "Line 5: Even Condition",
+          "text": "Check hota hai kya number 2 se poora divide hota hai (`i % 2 == 0`).",
+          "visual": ["10 % 2 == 0 (True)"]
+        },
+        {
+          "heading": "Line 6: Append to Even",
+          "text": "Agar even hai, toh list 'e' me joda jata hai.",
+          "visual": ["e = [10]"]
+        },
+        {
+          "heading": "Line 7: Else Block",
+          "text": "Agar number even nahi hai, toh else block chalta hai.",
+          "visual": ["Executed for odd"]
+        },
+        {
+          "heading": "Line 8: Append to Odd",
+          "text": "Number ko list 'o' me joda jata hai.",
+          "visual": ["o = [7]"]
+        },
+        {
+          "heading": "Line 9: Print Separated Lists",
+          "text": "Formatted string ka use karke even aur odd lists print ki jati hain.",
+          "visual": ["Output: Even : [10, 8, 2] Odd : [7, 3]"]
+        }
+      ]
+    },
+    "findFirstRepeatedElement": {
+      "id": 38,
+      "title": "Find the First Repeated Element",
+      "intro": "Learn how to find the first element that appears more than once in a list.",
+      "problem": "Given a list of integers, find the first element that appears more than once. Return the element based on the order in which the repeated occurrence is encountered.",
+      "input": "[5, 3, 7, 3, 8, 5]",
+      "output": "3",
+      "code": [
+        "x = [1, 4, 6, 2, 4, 7]",
+        "c = []",
+        "for i in x:",
+        "    if i in c:",
+        "        print(i)",
+        "        break",
+        "    else:",
+        "        c.append(i)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan input list 'x' define ki gayi hai.",
+          "visual": ["x = [1, 4, 6, 2, 4, 7]"]
+        },
+        {
+          "heading": "Line 2: Tracking List",
+          "text": "Visited elements track karne ke liye khali list 'c' banayi gayi hai.",
+          "visual": ["c = []"]
+        },
+        {
+          "heading": "Line 3: For Loop Shuru",
+          "text": "List ke har element 'i' par loop chalta hai.",
+          "visual": ["i = 1, 4, 6, 2, 4..."]
+        },
+        {
+          "heading": "Line 4: Check Repeated",
+          "text": "Check hota hai kya element pehle se list 'c' me maujood hai.",
+          "visual": ["4 in c (True)"]
+        },
+        {
+          "heading": "Line 5: Print Repeated",
+          "text": "Pehla repeated element print kiya jata hai.",
+          "visual": ["Output: 4"]
+        },
+        {
+          "heading": "Line 6: Break Loop",
+          "text": "Pehla repeat milte hi loop rok diya jata hai.",
+          "visual": ["break"]
+        },
+        {
+          "heading": "Line 7: Else Block",
+          "text": "Agar element pehle se nahi hai toh else part chalta hai.",
+          "visual": ["Executed"]
+        },
+        {
+          "heading": "Line 8: Append to Tracking",
+          "text": "Element ko list 'c' me jod liya jata hai.",
+          "visual": ["c.append(4)"]
+        }
+      ]
+    },
+    "findSumEvenOdd": {
+      "id": 39,
+      "title": "Find the Sum of Even and Odd Numbers",
+      "intro": "Learn how to calculate separate sums for even and odd numbers in a list.",
+      "problem": "Given a list of integers, calculate: Sum of all even numbers, Sum of all odd numbers.",
+      "input": "[10, 15, 20, 25]",
+      "output": "Even Sum: 30 Odd Sum: 40",
+      "code": [
+        "x = [10, 15, 20, 25]",
+        "e = 0",
+        "o = 0",
+        "for i in x:",
+        "    if i % 2 == 0:",
+        "        e = e + i",
+        "    else:",
+        "        o = o + i",
+        "print(f\"Even Sum : {e} Odd Sum : {o}\")"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input List Define",
+          "text": "Yahan input list 'x' define ki gayi hai.",
+          "visual": ["x = [10, 15, 20, 25]"]
+        },
+        {
+          "heading": "Line 2: Even Sum Initializer",
+          "text": "Even sum store karne ke liye 'e' ko 0 se set kiya gaya hai.",
+          "visual": ["e = 0"]
+        },
+        {
+          "heading": "Line 3: Odd Sum Initializer",
+          "text": "Odd sum store karne ke liye 'o' ko 0 se set kiya gaya hai.",
+          "visual": ["o = 0"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru",
+          "text": "List ke har element 'i' par loop chalta hai.",
+          "visual": ["i = 10, 15, 20, 25"]
+        },
+        {
+          "heading": "Line 5: Even Check",
+          "text": "Check hota hai kya number even hai.",
+          "visual": ["10 % 2 == 0 (True)"]
+        },
+        {
+          "heading": "Line 6: Add to Even Sum",
+          "text": "Even number ko 'e' me add kiya jata hai.",
+          "visual": ["e = 10"]
+        },
+        {
+          "heading": "Line 7: Else Block",
+          "text": "Agar number odd hai toh else block chalta hai.",
+          "visual": ["Executed for odd"]
+        },
+        {
+          "heading": "Line 8: Add to Odd Sum",
+          "text": "Odd number ko 'o' me add kiya jata hai.",
+          "visual": ["o = 15"]
+        },
+        {
+          "heading": "Line 9: Print Sums",
+          "text": "Dono sums ko formatted string me print kiya jata hai.",
+          "visual": ["Output: Even Sum : 30 Odd Sum : 40"]
+        }
+      ]
+    },
+    "findNumberOfWords": {
+      "id": 40,
+      "title": "Find the Number of Words",
+      "intro": "Learn how to count words in a sentence by counting spaces.",
+      "problem": "Given a sentence, count the number of words in it. Multiple spaces between words should not create extra words.",
+      "input": "Hello Python",
+      "output": "2",
+      "code": [
+        "x = 'Hello Python'",
+        "a = \" \"",
+        "c = 0",
+        "for i in x:",
+        "    if i == a:",
+        "        c += 1",
+        "print(c + 1)"
+      ],
+      "steps": [
+        {
+          "heading": "Line 1: Input Sentence Define",
+          "text": "Yahan input sentence 'x' define kiya gaya hai.",
+          "visual": ["x = 'Hello Python'"]
+        },
+        {
+          "heading": "Line 2: Space Character",
+          "text": "Space character ko variable 'a' me rakha gaya hai.",
+          "visual": ["a = ' '"]
+        },
+        {
+          "heading": "Line 3: Counter Initialize",
+          "text": "Spaces count karne ke liye 'c' ko 0 se set kiya gaya hai.",
+          "visual": ["c = 0"]
+        },
+        {
+          "heading": "Line 4: For Loop Shuru",
+          "text": "Sentence ke har character 'i' par loop chalta hai.",
+          "visual": ["i = H, e, l, l, o,  ..."]
+        },
+        {
+          "heading": "Line 5: Space Check",
+          "text": "Check hota hai kya character space hai.",
+          "visual": ["' ' == ' ' (True)"]
+        },
+        {
+          "heading": "Line 6: Counter Increment",
+          "text": "Space milne par counter 'c' ko 1 se badhaya jata hai.",
+          "visual": ["c += 1"]
+        },
+        {
+          "heading": "Line 7: Print Total Words",
+          "text": "Spaces ki sankhya me 1 jod kar total words print kiye jate hain.",
           "visual": ["Output: 2"]
         }
       ]
