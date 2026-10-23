@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>CodeMotion — Code in Motion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="homeBrand"><span class="brand-icon">⌘</span><span>Code<span class="accent">Motion</span><small>CODE IN MOTION</small></span></a>
+    <div class="top-actions">
+      <span class="creator">Created by <b>MD Aman</b></span>
+      
+    </div>
+  </header>
+
+  <main>
+    <section id="homeView" class="view">
+      <div class="hero">
+        <div class="eyebrow"><span class="pulse"></span><span data-en="YOUR VISUAL CODING JOURNEY" data-hi="आपकी विज़ुअल कोडिंग यात्रा">YOUR VISUAL CODING JOURNEY</span></div>
+        <h1 data-en="Learn code.<br><span class='gradient'>See it move.</span>" data-hi="कोड सीखो।<br><span class='gradient'>उसे चलते देखो।'">Learn code.<br><span class="gradient">See it move.</span></h1>
+        <p data-en="Explore prepared solutions, understand every line, and watch the logic come alive." data-hi="तैयार solutions देखो, हर line समझो और logic को animation में चलते देखो।">Explore prepared solutions, understand every line, and watch the logic come alive.</p>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow" data-en="PICK YOUR PATH" data-hi="अपना पाथ चुनो">PICK YOUR PATH</span><h2 data-en="Where do we start?" data-hi="कहाँ से शुरू करें?">Where do we start?</h2></div><span class="muted" data-en="Choose a subject to continue" data-hi="आगे बढ़ने के लिए subject चुनें">Choose a subject to continue</span></div>
+      <div id="subjectGrid" class="subject-grid"></div>
+      <footer>CodeMotion <span>·</span> <span data-en="Built to make code click." data-hi="कोड को आसान बनाने के लिए।">Built to make code click.</span> <b>MD Aman</b></footer>
+    </section>
+
+    <section id="levelsView" class="view hidden">
+      <button class="back-btn" data-action="home">← <span data-en="All paths" data-hi="सभी पाथ">All paths</span></button>
+      <div class="page-heading"><div class="subject-symbol" id="levelIcon">PY</div><div><div class="eyebrow" data-en="YOUR LEARNING PATH" data-hi="आपका लर्निंग पाथ">YOUR LEARNING PATH</div><h1 id="levelTitle">Python</h1><p id="levelDescription"></p></div></div>
+      <div class="path-card"><div class="path-head"><div><span class="eyebrow" data-en="THE ROADMAP" data-hi="रोडमैप">THE ROADMAP</span><h2 data-en="One step at a time." data-hi="एक-एक कदम करके।">One step at a time.</h2></div><div class="progress-ring" id="pathProgress">0%</div></div><div id="levelsList" class="levels-list"></div></div>
+    </section>
+
+    <section id="exercisesView" class="view hidden">
+      <button class="back-btn" data-action="levels">← <span data-en="Back to levels" data-hi="Levels पर वापस">Back to levels</span></button>
+      <div class="page-heading"><div class="subject-symbol" id="exerciseIcon">PY</div><div><div class="eyebrow" id="exerciseCrumb">PYTHON PATH</div><h1 id="exerciseTitle">Python — Level 1</h1><p data-en="Choose a solution to explore its code and animation." data-hi="Code और animation देखने के लिए कोई solution चुनें।">Choose a solution to explore its code and animation.</p></div></div>
+      <div class="list-heading"><h2 data-en="Solutions" data-hi="Solutions">Solutions</h2><span id="exerciseCount" class="muted"></span></div>
+      <div id="exerciseList" class="exercise-list"></div>
+    </section>
+
+    <section id="solutionView" class="view hidden">
+      <button class="back-btn" data-action="exercises">← <span data-en="Back to solutions" data-hi="Solutions पर वापस">Back to solutions</span></button>
+      <div class="solution-title"><div><div class="eyebrow" id="solutionCrumb">PYTHON · LEVEL 1</div><h1 id="solutionTitle">Find Even and Odd Numbers</h1><p id="solutionIntro"></p></div><span class="prepared-tag"><span class="pulse"></span><span data-en="PREPARED SOLUTION" data-hi="तैयार solution">PREPARED SOLUTION</span></span></div>
+      <div class="workspace">
+        <article class="panel code-panel">
+          <div class="panel-head"><span><span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span> <span data-en="SOLUTION.PY" data-hi="SOLUTION.PY">SOLUTION.PY</span></span><span class="language-chip">Python</span></div>
+          <div id="codeBlock" class="code-block"></div>
+          <div class="code-foot"><span data-en="Read-only · Prepared code" data-hi="केवल देखने के लिए · तैयार code">Read-only · Prepared code</span><span id="lineCounter">LINE 1</span></div>
+        </article>
+        <article class="panel animation-panel">
+          <div class="panel-head"><span data-en="VISUAL EXPLANATION" data-hi="विज़ुअल समझ">VISUAL EXPLANATION</span><span class="live-tag"><span class="pulse"></span> LIVE</span></div>
+          <div class="animation-stage" id="animationStage"><div class="stage-label" data-en="STEP ANIMATION" data-hi="स्टेप animation">STEP ANIMATION</div><div id="visualContent"></div></div>
+          <div class="step-explanation"><span class="step-number" id="stepNumber">01</span><div><b id="stepHeading"></b><p id="stepText"></p></div></div>
+          <div class="player-controls"><button id="prevStep" class="btn ghost">← <span data-en="Previous" data-hi="पिछला">Previous</span></button><div id="stepDots" class="step-dots"></div><button id="nextStep" class="btn primary"><span data-en="Next step" data-hi="अगला step">Next step</span> →</button></div>
+        </article>
+      </div>
+      <div class="example-panels"><article class="panel output-panel"><div class="panel-head"><span>EXAMPLE INPUT</span><span class="language-chip">Input</span></div><pre id="exampleInput"></pre></article><article class="panel output-panel"><div class="panel-head"><span>EXPECTED OUTPUT</span><span class="output-status">● Example result</span></div><pre id="expectedOutput"></pre><p class="output-note">This website explains prepared examples. It does not execute code entered by visitors.</p></article></div>
+      <div class="solution-navigation"><button class="btn ghost" data-action="exercises">← <span data-en="All solutions" data-hi="सभी solutions">All solutions</span></button><button id="restartAnimation" class="btn primary">↻ <span data-en="Replay animation" data-hi="Animation फिर चलाएँ">Replay animation</span></button></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

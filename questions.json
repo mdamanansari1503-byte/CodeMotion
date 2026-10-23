@@ -1,0 +1,672 @@
+{
+  "version": 1,
+  "subjects": {
+    "python": {
+      "title": "Python",
+      "icon": "PY",
+      "description": "From your first variables to solving problems with confidence.",
+      "levels": [
+        {
+          "title": "Python \u2014 Level 1",
+          "desc": "Basics, conditions, loops and number problems",
+          "questions": [
+            "evenOdd",
+            "fibonacci",
+            "largest",
+            "countEven",
+            "sumList",
+            "multiplication10",
+            "countSigns",
+            "reverseNumber",
+            "factorial",
+            "prime"
+          ]
+        },
+        {
+          "title": "Python \u2014 Level 2",
+          "desc": "More loop and pattern practice",
+          "questions": []
+        },
+        {
+          "title": "Python \u2014 Level 3",
+          "desc": "Functions and problem-solving practice",
+          "questions": []
+        }
+      ]
+    },
+    "icpc": {
+      "title": "ICPC \u2014 Semester 1",
+      "icon": "IC",
+      "description": "Semester 1 coding practice, organised into clear learning levels.",
+      "levels": [
+        {
+          "title": "ICPC \u2014 Level 1",
+          "desc": "Semester 1 starter practice (separate question bank)",
+          "questions": []
+        },
+        {
+          "title": "ICPC \u2014 Level 2",
+          "desc": "Loops and sequences",
+          "questions": []
+        },
+        {
+          "title": "ICPC \u2014 Level 3",
+          "desc": "Logic-building challenges",
+          "questions": []
+        }
+      ]
+    }
+  },
+  "questions": {
+    "evenOdd": {
+      "id": "evenOdd",
+      "title": "Find Even and Odd Numbers",
+      "intro": "Classify every number in the list as even or odd.",
+      "problem": "Given a list of integers, print whether each number is even or odd.",
+      "input": "numbers = [10, 7, 4, 9]",
+      "output": "10: Even\n7: Odd\n4: Even\n9: Odd",
+      "code": [
+        "numbers = [10, 7, 4, 9]",
+        "for number in numbers:",
+        "    if number % 2 == 0:",
+        "        print(number, \": Even\")",
+        "    else:",
+        "        print(number, \": Odd\")"
+      ],
+      "steps": [
+        {
+          "heading": "Create the list",
+          "text": "The list stores four integers: 10, 7, 4 and 9.",
+          "visual": [
+            "10",
+            "7",
+            "4",
+            "9"
+          ]
+        },
+        {
+          "heading": "Visit each number",
+          "text": "The for loop processes one list item at a time.",
+          "visual": [
+            "10",
+            "7",
+            "4",
+            "9"
+          ]
+        },
+        {
+          "heading": "Check divisibility by 2",
+          "text": "A remainder of zero means the number is even.",
+          "visual": [
+            "10 % 2 = 0",
+            "7 % 2 = 1"
+          ]
+        },
+        {
+          "heading": "Choose the correct branch",
+          "text": "if handles even numbers; else handles odd numbers.",
+          "visual": [
+            "Even",
+            "Odd"
+          ]
+        },
+        {
+          "heading": "Print every classification",
+          "text": "The program prints the category for all four numbers.",
+          "visual": [
+            "10: Even",
+            "7: Odd",
+            "4: Even",
+            "9: Odd"
+          ]
+        }
+      ]
+    },
+    "fibonacci": {
+      "id": "fibonacci",
+      "title": "Print Fibonacci Series",
+      "intro": "Print the first n numbers of the Fibonacci sequence.",
+      "problem": "Given n = 7, print the first seven Fibonacci numbers starting from 0.",
+      "input": "n = 7",
+      "output": "0 1 1 2 3 5 8",
+      "code": [
+        "n = 7",
+        "a, b = 0, 1",
+        "for i in range(n):",
+        "    print(a, end=\" \")",
+        "    a, b = b, a + b"
+      ],
+      "steps": [
+        {
+          "heading": "Set the number of terms",
+          "text": "n is 7, so the loop runs seven times.",
+          "visual": [
+            "n = 7"
+          ]
+        },
+        {
+          "heading": "Initialize the sequence",
+          "text": "The first two values are a = 0 and b = 1.",
+          "visual": [
+            "a = 0",
+            "b = 1"
+          ]
+        },
+        {
+          "heading": "Repeat for each term",
+          "text": "The loop prints the current a value.",
+          "visual": [
+            "0",
+            "1",
+            "1",
+            "2",
+            "3",
+            "5",
+            "8"
+          ]
+        },
+        {
+          "heading": "Update both values",
+          "text": "The next pair becomes the old b and a + b.",
+          "visual": [
+            "0 + 1 = 1",
+            "1 + 1 = 2"
+          ]
+        },
+        {
+          "heading": "Finish the series",
+          "text": "Seven values have been printed.",
+          "visual": [
+            "0 1 1 2 3 5 8"
+          ]
+        }
+      ]
+    },
+    "largest": {
+      "id": "largest",
+      "title": "Find the Largest Number",
+      "intro": "Find the largest value without using max().",
+      "problem": "Find the largest number in the list without using the built-in max() function.",
+      "input": "numbers = [12, 45, 7, 89, 23]",
+      "output": "89",
+      "code": [
+        "numbers = [12, 45, 7, 89, 23]",
+        "largest = numbers[0]",
+        "for number in numbers:",
+        "    if number > largest:",
+        "        largest = number",
+        "print(largest)"
+      ],
+      "steps": [
+        {
+          "heading": "Create the list",
+          "text": "The list contains five values to compare.",
+          "visual": [
+            "12",
+            "45",
+            "7",
+            "89",
+            "23"
+          ]
+        },
+        {
+          "heading": "Assume the first is largest",
+          "text": "Start with largest = 12.",
+          "visual": [
+            "largest = 12"
+          ]
+        },
+        {
+          "heading": "Compare each value",
+          "text": "Each number is compared with the current largest.",
+          "visual": [
+            "12",
+            "45",
+            "7",
+            "89",
+            "23"
+          ]
+        },
+        {
+          "heading": "Update when needed",
+          "text": "The largest value changes from 12 to 45, then to 89.",
+          "visual": [
+            "12 \u2192 45 \u2192 89"
+          ]
+        },
+        {
+          "heading": "Print the answer",
+          "text": "89 is the largest value in the list.",
+          "visual": [
+            "89"
+          ]
+        }
+      ]
+    },
+    "countEven": {
+      "id": "countEven",
+      "title": "Count Even Numbers",
+      "intro": "Count how many values in the list are even.",
+      "problem": "Count even values in the given list.",
+      "input": "numbers = [10, 3, 6, 7, 8, 11]",
+      "output": "3",
+      "code": [
+        "numbers = [10, 3, 6, 7, 8, 11]",
+        "count = 0",
+        "for number in numbers:",
+        "    if number % 2 == 0:",
+        "        count += 1",
+        "print(count)"
+      ],
+      "steps": [
+        {
+          "heading": "Read the list",
+          "text": "The list contains six integers.",
+          "visual": [
+            "10",
+            "3",
+            "6",
+            "7",
+            "8",
+            "11"
+          ]
+        },
+        {
+          "heading": "Start the counter",
+          "text": "No even values have been counted yet.",
+          "visual": [
+            "count = 0"
+          ]
+        },
+        {
+          "heading": "Check each value",
+          "text": "Even values have remainder 0 when divided by 2.",
+          "visual": [
+            "10 \u2713",
+            "3 \u2715",
+            "6 \u2713",
+            "7 \u2715",
+            "8 \u2713",
+            "11 \u2715"
+          ]
+        },
+        {
+          "heading": "Increase the counter",
+          "text": "The counter increases for 10, 6 and 8.",
+          "visual": [
+            "0 \u2192 1 \u2192 2 \u2192 3"
+          ]
+        },
+        {
+          "heading": "Display the count",
+          "text": "There are three even numbers.",
+          "visual": [
+            "3"
+          ]
+        }
+      ]
+    },
+    "sumList": {
+      "id": "sumList",
+      "title": "Sum of Numbers in a List",
+      "intro": "Add list values without using sum().",
+      "problem": "Calculate the total of all values without using the built-in sum() function.",
+      "input": "numbers = [10, 20, 30, 40]",
+      "output": "100",
+      "code": [
+        "numbers = [10, 20, 30, 40]",
+        "total = 0",
+        "for number in numbers:",
+        "    total = total + number",
+        "print(total)"
+      ],
+      "steps": [
+        {
+          "heading": "Create the list",
+          "text": "The list contains 10, 20, 30 and 40.",
+          "visual": [
+            "10",
+            "20",
+            "30",
+            "40"
+          ]
+        },
+        {
+          "heading": "Initialize total",
+          "text": "Start the running total at zero.",
+          "visual": [
+            "total = 0"
+          ]
+        },
+        {
+          "heading": "Visit each value",
+          "text": "The loop takes one number from the list each time.",
+          "visual": [
+            "10",
+            "20",
+            "30",
+            "40"
+          ]
+        },
+        {
+          "heading": "Add to the total",
+          "text": "The running total becomes 10, 30, 60 and 100.",
+          "visual": [
+            "0 \u2192 10 \u2192 30 \u2192 60 \u2192 100"
+          ]
+        },
+        {
+          "heading": "Print the sum",
+          "text": "The final total is 100.",
+          "visual": [
+            "100"
+          ]
+        }
+      ]
+    },
+    "multiplication10": {
+      "id": "multiplication10",
+      "title": "Multiplication Table (1 to 10)",
+      "intro": "Print a number\u2019s multiplication table from 1 through 10.",
+      "problem": "Given n = 5, print its multiplication table from 1 to 10.",
+      "input": "n = 5",
+      "output": "5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\n5 x 6 = 30\n5 x 7 = 35\n5 x 8 = 40\n5 x 9 = 45\n5 x 10 = 50",
+      "code": [
+        "n = 5",
+        "for i in range(1, 11):",
+        "    print(n, \"x\", i, \"=\", n * i)"
+      ],
+      "steps": [
+        {
+          "heading": "Store the number",
+          "text": "n is the number whose table is required.",
+          "visual": [
+            "n = 5"
+          ]
+        },
+        {
+          "heading": "Loop from 1 to 10",
+          "text": "range(1, 11) produces 1 through 10.",
+          "visual": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "heading": "Multiply each time",
+          "text": "The current multiplier is multiplied by n.",
+          "visual": [
+            "5 \u00d7 1 = 5",
+            "5 \u00d7 2 = 10",
+            "5 \u00d7 3 = 15"
+          ]
+        },
+        {
+          "heading": "Print each row",
+          "text": "Each loop iteration prints one table row.",
+          "visual": [
+            "5 x 1 = 5",
+            "\u2026",
+            "5 x 10 = 50"
+          ]
+        }
+      ]
+    },
+    "countSigns": {
+      "id": "countSigns",
+      "title": "Count Positive, Negative and Zero",
+      "intro": "Count positive values, negative values and zeros separately.",
+      "problem": "Count each category in the given list.",
+      "input": "numbers = [10, -5, 0, 7, -2, 0, 8]",
+      "output": "Positive: 3\nNegative: 2\nZero: 2",
+      "code": [
+        "numbers = [10, -5, 0, 7, -2, 0, 8]",
+        "positive = negative = zero = 0",
+        "for n in numbers:",
+        "    if n > 0:",
+        "        positive += 1",
+        "    elif n < 0:",
+        "        negative += 1",
+        "    else:",
+        "        zero += 1",
+        "print(\"Positive:\", positive)",
+        "print(\"Negative:\", negative)",
+        "print(\"Zero:\", zero)"
+      ],
+      "steps": [
+        {
+          "heading": "Create the list",
+          "text": "The list contains positive numbers, negative numbers and zeros.",
+          "visual": [
+            "10",
+            "-5",
+            "0",
+            "7",
+            "-2",
+            "0",
+            "8"
+          ]
+        },
+        {
+          "heading": "Initialize counters",
+          "text": "All three counters begin at zero.",
+          "visual": [
+            "Positive: 0",
+            "Negative: 0",
+            "Zero: 0"
+          ]
+        },
+        {
+          "heading": "Check each value",
+          "text": "if, elif and else identify each value\u2019s category.",
+          "visual": [
+            "10 \u2192 positive",
+            "-5 \u2192 negative",
+            "0 \u2192 zero"
+          ]
+        },
+        {
+          "heading": "Update the counters",
+          "text": "The counters finish at 3, 2 and 2.",
+          "visual": [
+            "Positive: 3",
+            "Negative: 2",
+            "Zero: 2"
+          ]
+        },
+        {
+          "heading": "Print the counts",
+          "text": "Show the final count for each category.",
+          "visual": [
+            "3",
+            "2",
+            "2"
+          ]
+        }
+      ]
+    },
+    "reverseNumber": {
+      "id": "reverseNumber",
+      "title": "Reverse a Number",
+      "intro": "Reverse an integer using arithmetic, not string conversion.",
+      "problem": "Reverse the digits of 12345 using arithmetic operations only.",
+      "input": "n = 12345",
+      "output": "54321",
+      "code": [
+        "n = 12345",
+        "reversed_num = 0",
+        "while n > 0:",
+        "    digit = n % 10",
+        "    reversed_num = reversed_num * 10 + digit",
+        "    n //= 10",
+        "print(reversed_num)"
+      ],
+      "steps": [
+        {
+          "heading": "Store the number",
+          "text": "Start with n = 12345.",
+          "visual": [
+            "12345"
+          ]
+        },
+        {
+          "heading": "Initialize the result",
+          "text": "The reversed number starts at zero.",
+          "visual": [
+            "0"
+          ]
+        },
+        {
+          "heading": "Extract the last digit",
+          "text": "n % 10 gives the final digit, 5.",
+          "visual": [
+            "12345 % 10 = 5"
+          ]
+        },
+        {
+          "heading": "Append the digit",
+          "text": "Multiply the result by 10 and add the digit.",
+          "visual": [
+            "0 \u2192 5 \u2192 54 \u2192 543"
+          ]
+        },
+        {
+          "heading": "Remove the digit",
+          "text": "Integer division removes the last digit from n.",
+          "visual": [
+            "12345 \u2192 1234 \u2192 123"
+          ]
+        },
+        {
+          "heading": "Print the result",
+          "text": "After all digits are processed, the result is 54321.",
+          "visual": [
+            "54321"
+          ]
+        }
+      ]
+    },
+    "factorial": {
+      "id": "factorial",
+      "title": "Factorial of a Number",
+      "intro": "Calculate n! using a loop; 0! is 1.",
+      "problem": "Calculate the factorial of n = 5. Remember that 0! = 1.",
+      "input": "n = 5",
+      "output": "120",
+      "code": [
+        "n = 5",
+        "result = 1",
+        "for i in range(1, n + 1):",
+        "    result *= i",
+        "print(result)"
+      ],
+      "steps": [
+        {
+          "heading": "Store n",
+          "text": "The requested number is 5.",
+          "visual": [
+            "n = 5"
+          ]
+        },
+        {
+          "heading": "Start with one",
+          "text": "Factorial is a product, so initialize result to 1.",
+          "visual": [
+            "result = 1"
+          ]
+        },
+        {
+          "heading": "Loop from 1 to n",
+          "text": "The loop visits 1, 2, 3, 4 and 5.",
+          "visual": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "heading": "Multiply the result",
+          "text": "The running product becomes 1, 2, 6, 24 and 120.",
+          "visual": [
+            "1 \u2192 2 \u2192 6 \u2192 24 \u2192 120"
+          ]
+        },
+        {
+          "heading": "Display factorial",
+          "text": "The factorial of 5 is 120.",
+          "visual": [
+            "120"
+          ]
+        }
+      ]
+    },
+    "prime": {
+      "id": "prime",
+      "title": "Check Prime Number",
+      "intro": "Check whether a number has any divisor other than 1 and itself.",
+      "problem": "Determine whether n = 17 is prime.",
+      "input": "n = 17",
+      "output": "Prime",
+      "code": [
+        "n = 17",
+        "is_prime = n > 1",
+        "for i in range(2, int(n ** 0.5) + 1):",
+        "    if n % i == 0:",
+        "        is_prime = False",
+        "        break",
+        "print(\"Prime\" if is_prime else \"Not Prime\")"
+      ],
+      "steps": [
+        {
+          "heading": "Store the number",
+          "text": "We need to test n = 17.",
+          "visual": [
+            "n = 17"
+          ]
+        },
+        {
+          "heading": "Check the starting condition",
+          "text": "A prime number must be greater than 1.",
+          "visual": [
+            "17 > 1 \u2713"
+          ]
+        },
+        {
+          "heading": "Try possible divisors",
+          "text": "Test integers from 2 through the square root of 17.",
+          "visual": [
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "heading": "Look for a remainder of zero",
+          "text": "None of these values divides 17 evenly.",
+          "visual": [
+            "17 % 2 \u2260 0",
+            "17 % 3 \u2260 0",
+            "17 % 4 \u2260 0"
+          ]
+        },
+        {
+          "heading": "Print the result",
+          "text": "No divisor was found, so 17 is prime.",
+          "visual": [
+            "Prime"
+          ]
+        }
+      ]
+    }
+  }
+}
