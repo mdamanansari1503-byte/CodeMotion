@@ -20,6 +20,7 @@
             "reverseNumber",
             "factorial",
             "prime"
+            "findSmallest"
           ]
         },
         {
@@ -610,7 +611,7 @@
         }
       ]
     },
-    "prime": {
+   "prime": {
       "id": "prime",
       "title": "Check Prime Number",
       "intro": "Check whether a number has any divisor other than 1 and itself.",
@@ -628,83 +629,66 @@
       ],
       "steps": [
         {
-          "heading": "Store the number",
-          "text": "We need to test n = 17.",
-          "visual": [
-            "n = 17"
-          ]
-        },
-        {
           "heading": "Check the starting condition",
           "text": "A prime number must be greater than 1.",
-          "visual": [
-            "17 > 1 \u2713"
-          ]
+          "visual": ["17 > 1 ✓"]
         },
         {
           "heading": "Try possible divisors",
           "text": "Test integers from 2 through the square root of 17.",
-          "visual": [
-            "2",
-            "3",
-            "4"
-          ]
+          "visual": ["2", "3", "4"]
         },
         {
           "heading": "Look for a remainder of zero",
           "text": "None of these values divides 17 evenly.",
-          "visual": [
-            "17 % 2 \u2260 0",
-            "17 % 3 \u2260 0",
-            "17 % 4 \u2260 0"
-          ]
+          "visual": ["17 % 2 ≠ 0", "17 % 3 ≠ 0", "17 % 4 ≠ 0"]
         },
         {
           "heading": "Print the result",
           "text": "No divisor was found, so 17 is prime.",
-          "visual": [
-            "Prime"
-          ]
+          "visual": ["Prime"]
         }
       ]
-      "findSmallest": {
-    "id": "findSmallest",
-    "title": "Find the Smallest Number",
-    "intro": "Learn how to find the minimum element in a list of integers using a standard loop instead of the built-in min() function.",
-    "problem": "Given a list of integers, find the smallest number. Do not use the built-in min() function.",
-    "input": "x = [12, 5, 23, 2, 18]",
-    "output": "2",
-    "code": [
-      "x = [12, 5, 23, 2, 18]",
-      "m = x[0]",
-      "for num in x:",
-      "    if num < m:",
-      "        m = num",
-      "print(m)"
-    ],
-    "steps": [
-      {
-        "heading": "Initialize Minimum",
-        "text": "We assume the first element of the list is the smallest and store it in variable 'm'.",
-        "visual": ["m = 12"]
-      },
-      {
-        "heading": "Iterate Through List",
-        "text": "We loop through each number in the list 'x' one by one.",
-        "visual": ["num = 5"]
-      },
-      {
-        "heading": "Compare and Update",
-        "text": "If the current number is smaller than 'm', we update 'm' with the new smaller value.",
-        "visual": ["5 < 12 -> m = 5"]
-      },
-      {
-        "heading": "Print Result",
-        "text": "After checking all elements, we print the final smallest number found.",
-        "visual": ["Output: 2"]
-      }
-    ]
-  }
+    },
+    "findSmallest": {
+      "id": "findSmallest",
+      "title": "Find the Smallest Number",
+      "intro": "Learn how to find the minimum element in a list of integers using a standard loop instead of the built-in min() function.",
+      "problem": "Given a list of integers, find the smallest number. Do not use the built-in min() function.",
+      "input": "x = [12, 5, 23, 2, 18]",
+      "output": "2",
+      "code": [
+        "x = [12, 5, 23, 2, 18]",
+        "m = x[0]",
+        "for num in x:",
+        "    if num < m:",
+        "        m = num",
+        "print(m)"
+      ],
+      "steps": [
+        {
+          "heading": "Initialize Minimum",
+          "text": "We assume the first element of the list is the smallest and store it in variable 'm'.",
+          "visual": ["m = 12"]
+        },
+        {
+          "heading": "Iterate Through List",
+          "text": "We loop through each number in the list 'x' one by one.",
+          "visual": ["num = 5"]
+        },
+        {
+          "heading": "Compare and Update",
+          "text": "If the current number is smaller than 'm', we update 'm' with the new smaller value.",
+          "visual": ["5 < 12 -> m = 5"]
+        },
+        {
+          "heading": "Print Result",
+          "text": "After checking all elements, we print the final smallest number found.",
+          "visual": ["Output: 2"]
+        }
+      ]
     }
   }
-}
+} 
+ 
+    
